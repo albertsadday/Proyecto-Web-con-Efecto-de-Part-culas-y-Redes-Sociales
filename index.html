@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Interactivo | Efecto Partículas</title>
+    <meta name="description" content="Sitio web interactivo con efecto de partículas y asistente de IA">
+    
+    <!-- Preconexiones y preloads para mejor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" as="style">
+    
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/particles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <!-- Canvas para el efecto de partículas -->
+    <div id="particles-js" class="particles-container" aria-hidden="true"></div>
+    
+    <!-- Navegación principal -->
+    <nav class="navigation">
+        <div class="container">
+            <a href="#" class="logo">Particles<span>AI</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Acerca</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <button id="ai-assistant-btn" class="ai-btn" aria-label="Abrir asistente de IA">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 8V4H8"></path>
+                    <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+                    <path d="M2 14h2"></path>
+                    <path d="M20 14h2"></path>
+                    <path d="M15 13v2"></path>
+                    <path d="M9 13v2"></path>
+                </svg>
+                Asistente AI
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Contenido principal -->
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Explora el Futuro Digital</h1>
+                <p class="hero-subtitle">Interacción con partículas y asistencia de inteligencia artificial</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary">Contáctame</a>
+                    <a href="#projects" class="btn secondary">Ver Proyectos</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="social" class="social-section">
+            <div class="container">
+                <h2 class="section-title">Conéctate Conmigo</h2>
+                <div class="social-grid">
+                    <!-- Tarjetas de redes sociales generadas dinámicamente -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Asistente de IA (oculto inicialmente) -->
+    <div id="ai-assistant" class="ai-assistant">
+        <div class="ai-header">
+            <h3>Asistente de IA</h3>
+            <button id="close-ai" class="close-btn" aria-label="Cerrar asistente">
+                &times;
+            </button>
+        </div>
+        <div class="ai-conversation">
+            <!-- Mensajes de la conversación aparecerán aquí -->
+        </div>
+        <div class="ai-input">
+            <input type="text" id="ai-message" placeholder="Escribe tu pregunta...">
+            <button id="send-ai" class="send-btn">Enviar</button>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/ai-assistant.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
